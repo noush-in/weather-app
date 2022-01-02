@@ -26,133 +26,133 @@
     <link rel="stylesheet" href="src/styles.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
   </head>
-  <body>
-    <div class="container">
-      <div class="weather-app-wrapper shadow-lg">
-        <div class="weather-app">
-          <form id="city-form" class="row justify-content-center">
-            <div class="col-6">
-              <input
-                type="text"
-                class="form-control shadow-sm"
-                placeholder="Enter a city "
-                id="search-text-input"
-              />
-            </div>
-            <div class="col-2">
-              <button type="submit" class="btn btn-primary mb-3 shadow-md">
-                Search
-              </button>
-            </div>
-            <div class="col-4">
-              <button
-                type="button"
-                class="btn btn-primary mb-3 shadow-md"
-                id="current-location"
-              >
-                Current location
-              </button>
-            </div>
-          </form>
-          <div class="current-temp">
-            <div class="row" id="current-city-info">
-              <div class="col-6">
-                <h1 id="city"></h1>
-                <ul>
-                  <li id="date">Tuesday 20:13</li>
-                  <li id="description">Partly cloudy</li>
-                </ul>
-              </div>
-              <div class="col-6">
-                <div class="clearfix">
-                  <img
-                    src="images/partly_cloudy.png"
-                    alt="partly cloudy icon"
-                    class="weather-icon float-left"
-                  />
-                  <div class="float-left">
-                    <span class="temperature" id="temperature">20</span>
-                    <span class="unit">
-                      <a href="#" id="celsius-link">℃</a> |
-                      <a href="#" id="fahrenheit-link">℉</a>
-                    </span>
-                  </div>
-                </div>
-                <ul>
-                  <li id="feels-like">Feels like: 20℃</li>
-                  <li id="humidity">Humidity: 77%</li>
-                  <li id="wind">Wind: 8 km/h</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="weather-forcast" id="forcast">
-          <div class="row justify-content-center">
-            <div class="col-2 border m-2 shadow-lg">
-              <div class="date">Sun</div>
-              <img
-                src="images/partly_cloudy.png"
-                alt="partly cloudy icon"
-                class="weather-icon float-left"
-              />
-              <div class="weather-temperature">
-                <div class="weather-temp-max">H:16℃</div>
-                <div class="weather-temp-min">L:-3℃</div>
-              </div>
-            </div>
-            <div class="col-2 border m-2 shadow-lg">
-              <div class="date">Mon</div>
-              <img
-                src="images/cloudy.png"
-                alt="partly cloudy icon"
-                class="weather-icon float-left"
-              />
-              <div class="weather-temperature">
-                <div class="weather-temp-max">H:14℃</div>
-                <div class="weather-temp-min">L:-4℃</div>
-              </div>
-            </div>
-            <div class="col-2 border m-2 shadow-lg">
-              <div class="date">Tue</div>
-              <img
-                src="images/rain.png"
-                alt="partly cloudy icon"
-                class="weather-icon float-left"
-              />
-              <div class="weather-temperature">
-                <div class="weather-temp-max">H:14℃</div>
-                <div class="weather-temp-min">L:-5℃</div>
-              </div>
-            </div>
-            <div class="col-2 border m-2 shadow-lg">
-              <div class="date">Wed</div>
-              <img
-                src="images/rain.png"
-                alt="partly cloudy icon"
-                class="weather-icon float-left"
-              />
-              <div class="weather-temperature">
-                <div class="weather-temp-max">H:14℃</div>
-                <div class="weather-temp-min">L:-5℃</div>
-              </div>
-            </div>
-            <div class="col-2 border m-2 shadow-lg">
-              <div class="date">Thu</div>
-              <img
-                src="images/partly_cloudy.png"
-                alt="partly cloudy icon"
-                class="weather-icon float-left"
-              />
-              <div class="weather-temperature">
-                <div class="weather-temp-max">H:17℃</div>
-                <div class="weather-temp-min">L:-2℃</div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+ 	<body>
+		<div class="container">
+			<div class="weather-app-wrapper shadow-lg">
+				<div class="weather-app">
+					<form id="city-form" class="row justify-content-center">
+						<div class="col-6">
+							<input
+								type="text"
+								class="form-control shadow-sm"
+								placeholder="Enter a city "
+								id="search-text-input"
+							/>
+						</div>
+						<div class="col-2">
+							<button type="submit" class="btn btn-primary mb-3 shadow-md">
+								Search
+							</button>
+						</div>
+						<div class="col-4">
+							<button
+								type="button"
+								class="btn btn-primary mb-3 shadow-md"
+								id="current-location-button"
+							>
+								My location
+							</button>
+						</div>
+					</form>
+					<div class="current-temp">
+						<div class="row" id="current-city-info">
+							<div class="col-6">
+								<h1 id="city"></h1>
+								<ul>
+									<li id="date">Date</li>
+									<li id="description"></li>
+								</ul>
+							</div>
+							<div class="col-6">
+								<div class="clearfix">
+									<img
+										src="F:/week2plus/images/partly_cloudy.png"
+										alt="partly cloudy icon"
+										class="weather-icon float-left"
+									/>
+									<div class="float-left">
+										<span class="temperature" id="temperature"></span>
+										<span class="unit">
+											<a href="#" id="celsius-link">℃</a> |
+											<a href="#" id="fahrenheit-link">℉</a>
+										</span>
+									</div>
+								</div>
+								<ul>
+									<li>Feels like: <span id="feels-like"></span> ℃</li>
+									<li>Humidity: <span id="humidity"></span> %</li>
+									<li>Wind: <span id="wind"></span> km/h</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="weather-forcast" id="forcast">
+					<div class="row justify-content-center">
+						<div class="col-2 border m-2 shadow-lg">
+							<div class="date">Sun</div>
+							<img
+								src="F:/week2plus/images/partly_cloudy.png"
+								alt="partly cloudy icon"
+								class="weather-icon float-left"
+							/>
+							<div class="weather-temperature">
+								<div class="weather-temp-max">H:16℃</div>
+								<div class="weather-temp-min">L:-3℃</div>
+							</div>
+						</div>
+						<div class="col-2 border m-2 shadow-lg">
+							<div class="date">Mon</div>
+							<img
+								src="F:/week2plus/images/cloudy.png"
+								alt="partly cloudy icon"
+								class="weather-icon float-left"
+							/>
+							<div class="weather-temperature">
+								<div class="weather-temp-max">H:14℃</div>
+								<div class="weather-temp-min">L:-4℃</div>
+							</div>
+						</div>
+						<div class="col-2 border m-2 shadow-lg">
+							<div class="date">Tue</div>
+							<img
+								src="F:/week2plus/images/rain.png"
+								alt="partly cloudy icon"
+								class="weather-icon float-left"
+							/>
+							<div class="weather-temperature">
+								<div class="weather-temp-max">H:14℃</div>
+								<div class="weather-temp-min">L:-5℃</div>
+							</div>
+						</div>
+						<div class="col-2 border m-2 shadow-lg">
+							<div class="date">Wed</div>
+							<img
+								src="F:/week2plus/images/rain.png"
+								alt="partly cloudy icon"
+								class="weather-icon float-left"
+							/>
+							<div class="weather-temperature">
+								<div class="weather-temp-max">H:14℃</div>
+								<div class="weather-temp-min">L:-5℃</div>
+							</div>
+						</div>
+						<div class="col-2 border m-2 shadow-lg">
+							<div class="date">Thu</div>
+							<img
+								src="F:/week2plus/images/partly_cloudy.png"
+								alt="partly cloudy icon"
+								class="weather-icon float-left"
+							/>
+							<div class="weather-temperature">
+								<div class="weather-temp-max">H:17℃</div>
+								<div class="weather-temp-min">L:-2℃</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
     <script src="src/index.js"></script>
   </body>
 </html>
