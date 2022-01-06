@@ -29,7 +29,7 @@ function showWeather(response) {
 		response.data.main.temp
 	);
 	document.querySelector("#description").innerHTML =
-		response.data.weather[0].main;
+		response.data.weather[0].description;
 	document.querySelector("#feels-like").innerHTML = Math.round(
 		response.data.main.feels_like
 	);
@@ -38,6 +38,10 @@ function showWeather(response) {
 	document.querySelector("#wind").innerHTML = Math.round(
 		response.data.wind.speed
 	);
+	document
+		.querySelector("#icon")
+		.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
+	document.querySelector("#icon").setAttribute("alt",response.data.weather[0].description);	
 	let temp = Math.round(response.data.main.temp);
 	function celsiusChangeUnit(event) {
 		event.preventDefault();
