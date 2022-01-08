@@ -46,20 +46,18 @@ function showWeather(response) {
 }
 function displayFahrenheitTemperature(event) {
 	event.preventDefault();
+	celsiusLink.classList.remove("active");
+	fahrenheitLink.classList.add("active");
 	document.querySelector("#temperature").innerHTML = Math.round(
 		(celsiusTemperature * 9) / 5 + 32
-	);
-}
-function displayCelsiusTemperature(event) {
-	event.preventDefault();
+		);
+	}
+	function displayCelsiusTemperature(event) {
+		event.preventDefault();
+		celsiusLink.classList.add("active");
+		fahrenheitLink.classList.remove("active");
 	document.querySelector("#temperature").innerHTML = celsiusTemperature;
 }
-document
-	.querySelector("#celsius-link")
-	.addEventListener("click", displayCelsiusTemperature);
-document
-	.querySelector("#fahrenheit-link")
-	.addEventListener("click", displayFahrenheitTemperature);
 
 function searchCity(city) {
 	let apiKey = "3dec6cd6ea83e67d96c00c2a25d00b2a";
@@ -92,4 +90,10 @@ searchForm.addEventListener("submit", handleSubmit);
 let button = document.querySelector("#current-location-button");
 button.addEventListener("click", getCurrentLocation);
 
-searchCity("Toronto");
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click",displayCelsiusTemperature);
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+	
+	searchCity("Toronto");
