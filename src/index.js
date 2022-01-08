@@ -81,12 +81,10 @@ function getCurrentLocation(event) {
 	navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-//feature #1
 let timeElement = document.querySelector("#date");
 let currentTime = new Date();
 timeElement.innerHTML = formatDate(currentTime);
 
-//feature #2
 let searchForm = document.querySelector("#city-form");
 searchForm.addEventListener("submit", handleSubmit);
 
