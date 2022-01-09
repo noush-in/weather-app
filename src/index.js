@@ -22,6 +22,32 @@ function formatDate(currentTime) {
 	}
 	return `${day} ${hour}:${minute}`;
 }
+function displayForcast() {
+	let forcastElement = document.querySelector("#forcast");
+	forcastHTML = `<div class="row justify-content-center">`;
+	let days = ["Thu","Fri","Sat","Sun","Mon"];
+	days.forEach(function(day){
+
+		forcastHTML =
+			forcastHTML +
+			`			
+							<div class="col-2 border m-2 shadow-lg">
+								<div class="date">${day}</div>
+								<img
+									src="images/partly_cloudy.png"
+									alt="partly cloudy icon"
+									class="weather-icon float-left"
+								/>
+								<div class="weather-temperature">
+									<span class="weather-temp-max">16°</span>
+									<span class="weather-temp-min">-3°</span>
+								</div>
+							</div>
+						`;
+	})
+	forcastHTML = forcastHTML + `</div>`;
+	forcastElement.innerHTML = forcastHTML;
+}
 
 function showWeather(response) {
 	document.querySelector("#city").innerHTML = response.data.name;
@@ -40,9 +66,14 @@ function showWeather(response) {
 	);
 	document
 		.querySelector("#icon")
-		.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
-	document.querySelector("#icon").setAttribute("alt",response.data.weather[0].description);	
- celsiusTemperature = Math.round(response.data.main.temp);
+		.setAttribute(
+			"src",
+			`http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+		);
+	document
+		.querySelector("#icon")
+		.setAttribute("alt", response.data.weather[0].description);
+	celsiusTemperature = Math.round(response.data.main.temp);
 }
 function displayFahrenheitTemperature(event) {
 	event.preventDefault();
@@ -50,12 +81,12 @@ function displayFahrenheitTemperature(event) {
 	fahrenheitLink.classList.add("active");
 	document.querySelector("#temperature").innerHTML = Math.round(
 		(celsiusTemperature * 9) / 5 + 32
-		);
-	}
-	function displayCelsiusTemperature(event) {
-		event.preventDefault();
-		celsiusLink.classList.add("active");
-		fahrenheitLink.classList.remove("active");
+	);
+}
+function displayCelsiusTemperature(event) {
+	event.preventDefault();
+	celsiusLink.classList.add("active");
+	fahrenheitLink.classList.remove("active");
 	document.querySelector("#temperature").innerHTML = celsiusTemperature;
 }
 
@@ -91,9 +122,9 @@ let button = document.querySelector("#current-location-button");
 button.addEventListener("click", getCurrentLocation);
 
 let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click",displayCelsiusTemperature);
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 let fahrenheitLink = document.querySelector("#fahrenheit-link");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
-	
-	searchCity("Toronto");
+searchCity("Toronto");
+displayForcast();

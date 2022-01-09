@@ -99,3 +99,6 @@ img {
 .current-temp .active:hover{
   text-decoration: none;
 }
+.weather-temp-min{
+  opacity: 0.6;
+}
