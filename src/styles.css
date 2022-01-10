@@ -29,7 +29,7 @@ img {
 #current-city-info {
   text-align: left;
 }
-.weather-forcast {
+.weather-forecast {
   line-height: 30px;
 }
 
@@ -43,7 +43,7 @@ img {
   margin-right: auto;
   margin-left: auto;
 }
-#forcast {
+#forecast {
   text-align: center;
 }
 .weather-app-wrapper {
@@ -101,4 +101,8 @@ img {
 }
 .weather-temp-min{
   opacity: 0.6;
+  margin: 2px;
+}
+.weather-temp-max{
+  margin: 2px;
 }
