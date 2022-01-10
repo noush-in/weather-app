@@ -47,6 +47,7 @@ img {
   text-align: center;
 }
 .weather-app-wrapper {
+  background: url();
   color: rgb(0, 0, 0);
   border: 1px solid #ffff;
   max-width: 600%;
@@ -97,7 +98,7 @@ img {
   text-decoration: none;
 }
 .current-temp .active:hover{
-  text-decoration: none;
+  text-decoration:none;
 }
 .weather-temp-min{
   opacity: 0.6;
@@ -105,4 +106,11 @@ img {
 }
 .weather-temp-max{
   margin: 2px;
+}
+
+#celsius-link {
+  text-decoration: none;
+}
+#fahrenheit-link{
+  text-decoration: none;
 }
