@@ -52,15 +52,22 @@ img {
 	max-width: 600%;
 	padding: 50px;
 	border-radius: 15px;
-
 	background: #ffff;
+	background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
+	background: radial-gradient(668px at 2.6% 8.3%, rgb(219, 112, 147) 0%, rgb(255, 228, 225) 49.5%, rgb(200, 130, 200) 99.4%);
+	
 }
+
+
 .weather-forecast .col-2 {
-	background: #ffff;
+	border: #240747;
+	border-radius: 15px;
+	
+	
 }
 
 #city-form {
-	margin: 20px 20px 15px 20px;
+	margin: 20px 20px 15px 0;
 	text-align: left;
 }
 
@@ -79,10 +86,6 @@ img {
 }
 .icon {
 	font-size: 20px;
-}
-.col-2 {
-	border: #240747;
-	border-radius: 15px;
 }
 .weather-icon {
 	height: 64px;
@@ -116,4 +119,7 @@ img {
 }
 #fahrenheit-link {
 	text-decoration: none;
+}
+.current-temp .col-6{
+	padding: 30px;
 }
