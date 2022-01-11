@@ -54,12 +54,12 @@ img {
 	max-width: 600%;
 	padding: 50px;
 	border-radius: 15px;
-	background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
+	background: linear-gradient(-225deg, #FF057C 0%, #8D0B93 50%, #321575 100%);
 }
 
 .weather-forecast .col-2 {
-	border-radius: 20px;
-	background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
+	border-radius: 16px;
+	background: radial-gradient(275px at -14% 125%, rgb(255, 255, 255) 0%, rgb(218, 134, 182) 100.7%);
 }
 
 #city-form {
