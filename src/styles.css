@@ -1,116 +1,119 @@
 /** @format */
 
 body {
-  margin: 20px;
-  background: radial-gradient(
-    circle at 10% 20%,
-    rgb(251, 222, 238) 15.6%,
-    rgb(206, 201, 226) 80.3%
-  );
+	margin: 20px;
+	background: radial-gradient(
+		circle at 10% 20%,
+		rgb(251, 222, 238) 15.6%,
+		rgb(206, 201, 226) 80.3%
+	);
 }
 p {
-  padding: 20px 0;
+	padding: 20px 0;
 }
 li {
-  display: block;
-  list-style-type: disc;
+	display: block;
+	list-style-type: disc;
 }
 ul {
-  padding: 0 0 0 0;
+	padding: 0 0 0 0;
 }
 h4 {
-  padding: 10px;
-  opacity: 0.9;
+	padding: 10px;
+	opacity: 0.9;
 }
 img {
-  vertical-align: bottom;
+	vertical-align: bottom;
 }
 
 #current-city-info {
-  text-align: left;
+	text-align: left;
 }
 .weather-forecast {
-  line-height: 30px;
+	line-height: 30px;
 }
 
 .container {
-  font-family: "Roboto Slab", serif;
-  box-sizing: border-box;
-  width: 100%;
-  max-width: 720px;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+	font-family: "Roboto Slab", serif;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 720px;
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-left: auto;
 }
 #forecast {
-  text-align: center;
+	text-align: center;
 }
 .weather-app-wrapper {
-  background: url();
-  color: rgb(0, 0, 0);
-  border: 1px solid #ffff;
-  max-width: 600%;
-  padding: 50px;
-  border-radius: 15px;
-  background: #ffff;
+	color: rgb(0, 0, 0);
+	border: 1px solid #ffff;
+	max-width: 600%;
+	padding: 50px;
+	border-radius: 15px;
+
+	background: #ffff;
 }
+.weather-forecast .col-2 {
+	background: #ffff;
+}
+
 #city-form {
-  margin: 20px 20px 15px 20px;
-  text-align: left;
+	margin: 20px 20px 15px 20px;
+	text-align: left;
 }
 
 #temperature {
-  color: rgb(33, 33, 33);
-  font-size: 64px;
-  font-weight: 400;
-  line-height: 1;
+	color: rgb(33, 33, 33);
+	font-size: 64px;
+	font-weight: 400;
+	line-height: 1;
 }
 .unit {
-  position: relative;
-  top: -34px;
+	position: relative;
+	top: -34px;
 }
 .float-left {
-  display: inline;
+	display: inline;
 }
 .icon {
-  font-size: 20px;
+	font-size: 20px;
 }
 .col-2 {
-  border: #ffff;
-  border-radius: 15px;
+	border: #240747;
+	border-radius: 15px;
 }
 .weather-icon {
-  height: 64px;
-  width: 64px;
-  margin-right: 10px;
+	height: 64px;
+	width: 64px;
+	margin-right: 10px;
 }
-.github-address{
-  margin: 10px ;
+.github-address {
+	margin: 10px;
 }
-.github-link{
-  text-decoration:none;
-
+.github-link {
+	text-decoration: none;
 }
-.current-temp .active{
-  color: black;
-  cursor: default;
-  text-decoration: none;
+.current-temp .active {
+	color: black;
+	cursor: default;
+	text-decoration: none;
 }
-.current-temp .active:hover{
-  text-decoration:none;
+.current-temp .active:hover {
+	text-decoration: none;
 }
-.weather-temp-min{
-  opacity: 0.6;
-  margin: 2px;
+.weather-temp-min {
+	opacity: 0.6;
+	margin: 2px;
 }
-.weather-temp-max{
-  margin: 2px;
+.weather-temp-max {
+	margin: 2px;
 }
 
 #celsius-link {
-  text-decoration: none;
+	text-decoration: none;
 }
-#fahrenheit-link{
-  text-decoration: none;
+#fahrenheit-link {
+	text-decoration: none;
 }
