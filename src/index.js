@@ -91,6 +91,8 @@ function displayTemperature(response) {
 		.setAttribute("alt", response.data.weather[0].description);
 	celsiusTemperature = Math.round(response.data.main.temp);
 	getForecast(response.data.coord);
+		celsiusLink.classList.add("active");
+		fahrenheitLink.classList.remove("active");
 }
 function displayFahrenheitTemperature(event) {
 	event.preventDefault();

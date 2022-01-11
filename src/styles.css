@@ -94,13 +94,15 @@ img {
 	text-decoration: none;
 }
 .current-temp .active {
-	color: rgb(255, 255, 255);
+	color: #ffff;
 	cursor: default;
 	text-decoration: none;
 }
 .current-temp .active:hover {
-	text-decoration: none;
+	text-decoration: underline;
 }
+
+
 .weather-temp-min {
 	opacity: 0.6;
 	margin: 2px;
