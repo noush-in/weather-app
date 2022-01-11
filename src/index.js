@@ -22,10 +22,10 @@ function formatDate(currentTime) {
 	}
 	return `${day} ${hour}:${minute}`;
 }
-function formatDay(timestamp){
+function formatDay(timestamp) {
 	let date = new Date(timestamp * 1000);
 	let day = date.getDay();
-	let days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+	let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 	return days[day];
 }
 
@@ -33,11 +33,11 @@ function displayForecast(response) {
 	let forecastElement = document.querySelector("#forecast");
 	forecastHTML = `<div class="row justify-content-center">`;
 	let forecast = response.data.daily;
-	forecast.forEach(function (forecastDay , index) {
-		if (index < 5){
-		forecastHTML =
-			forecastHTML +
-			`			
+	forecast.forEach(function (forecastDay, index) {
+		if (index < 5) {
+			forecastHTML =
+				forecastHTML +
+				`			
 							<div class="col-2  m-2 shadow-lg">
 								<div class="date">${formatDay(forecastDay.dt)}</div>
 								<img
@@ -53,9 +53,9 @@ function displayForecast(response) {
 								</div>
 							</div>
 						`;
-					}
+		}
 	});
-	
+
 	forecastHTML = forecastHTML + `</div>`;
 	forecastElement.innerHTML = forecastHTML;
 }
@@ -130,8 +130,6 @@ timeElement.innerHTML = formatDate(currentTime);
 
 let searchForm = document.querySelector("#city-form");
 searchForm.addEventListener("submit", handleSubmit);
-
-
 
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemperature);

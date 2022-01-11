@@ -46,24 +46,20 @@ img {
 #forecast {
 	text-align: center;
 }
+.weather-app {
+	color: rgb(255, 255, 255);
+}
 .weather-app-wrapper {
-	color: rgb(0, 0, 0);
-	border: 1px solid #ffff;
+	border: 1px solid linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
 	max-width: 600%;
 	padding: 50px;
 	border-radius: 15px;
-	background: #ffff;
 	background: linear-gradient(rgb(21, 13, 107) 1.1%, rgb(188, 16, 80) 130.5%);
-	background: radial-gradient(668px at 2.6% 8.3%, rgb(219, 112, 147) 0%, rgb(255, 228, 225) 49.5%, rgb(200, 130, 200) 99.4%);
-	
 }
 
-
 .weather-forecast .col-2 {
-	border: #240747;
-	border-radius: 15px;
-	
-	
+	border-radius: 20px;
+	background: linear-gradient(to top, #d299c2 0%, #fef9d7 100%);
 }
 
 #city-form {
@@ -72,7 +68,6 @@ img {
 }
 
 #temperature {
-	color: rgb(33, 33, 33);
 	font-size: 64px;
 	font-weight: 400;
 	line-height: 1;
@@ -99,7 +94,7 @@ img {
 	text-decoration: none;
 }
 .current-temp .active {
-	color: black;
+	color: rgb(255, 255, 255);
 	cursor: default;
 	text-decoration: none;
 }
@@ -120,6 +115,6 @@ img {
 #fahrenheit-link {
 	text-decoration: none;
 }
-.current-temp .col-6{
-	padding: 30px;
+.current-temp .col-6 {
+	padding: 0 25px 15px 25px;
 }
